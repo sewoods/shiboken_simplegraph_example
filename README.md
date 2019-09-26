@@ -1,4 +1,4 @@
-# Shiboken Example
+# Shiboken Simple Graph Example
 This folder contains two things: 1) a Qt for Python application that
 graphs data and uses SciPy to fit a non-linear curve to the data and 2)
 the tools to build and wrap a non-Qt based C++ library with Shiboken so
