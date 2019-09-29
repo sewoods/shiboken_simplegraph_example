@@ -2,6 +2,7 @@
 #define __DATAGENERATOR_H
 
 #include <vector>
+#include "internalclass.h"
 
 class DataGenerator 
 {
@@ -13,7 +14,15 @@ public:
 
     std::vector<double> getData(std::vector<double> &x_data);
 
-    void notUsedMethod();
+    const InternalClass& getInternalClass();
+
+private:
+
+    InternalClass  internalClass;    
 
 };
+inline const InternalClass& DataGenerator::getInternalClass()
+{
+    return internalClass;
+} 
 #endif 

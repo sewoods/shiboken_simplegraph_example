@@ -3,7 +3,8 @@
 #include <stdlib.h>
 #include <math.h>
 
-DataGenerator::DataGenerator()
+DataGenerator::DataGenerator() :
+    internalClass()
 {
 
 }
@@ -39,10 +40,5 @@ std::vector<double> DataGenerator::getData(std::vector<double> &x_data)
     }
 
     return y_data;
-
-}
-
-void DataGenerator::notUsedMethod()
-{
 
 }
