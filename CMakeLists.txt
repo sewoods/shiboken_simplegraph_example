@@ -104,7 +104,7 @@ set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 
 # Define the sample shared library for which we will create bindings.
-set(${sample_library}_sources datagenerator.cpp datafitter.cpp)
+set(${sample_library}_sources datagenerator.cpp datafitter.cpp internalclass.cpp)
 add_library(${sample_library} SHARED ${${sample_library}_sources})
 set_property(TARGET ${sample_library} PROPERTY PREFIX "")
 
