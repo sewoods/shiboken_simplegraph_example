@@ -53,6 +53,15 @@ shiboken2_generator can also be installed from a wheel, but you need to be caref
 have the same version as your installed PySide2 and shiboken, as well as your Qt. You can
 find the wheels at http://download.qt.io/snapshots/ci/pyside/[Qt Version -- e.g. 5.12]/latest/pyside2/
 
+Due to the fact that there are no links to shared libraries in the wheel, you have to do
+a couple of additional things to get the shiboken2_generator wheel to work on Linux and 
+macOS.
+
+* Add the path to qmake to your PATH (i.e. the bin directory of the version of Qt you are using)
+* If on Linux, create a LD_LIBRARY_PATH and have it include the Qt library path
+* On Linux, create a CLANG_INSTALL_DIR environment variable and set it to the include directory of clang
+* Check that you have the "dev" version of Python installed, so you have Python includes (Python.h, etc.)
+
 You can also build PySide2, shiboken2 and shiboken2_generator from source. See 
 https://wiki.qt.io/Qt_for_Python/GettingStarted for details.
 
